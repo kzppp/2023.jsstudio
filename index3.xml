@@ -38,10 +38,74 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-<link href="jsstudio.css" rel="stylesheet" type="text/css">
+<link href="jsstudio.css" type="text/css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/core/tooltip.css">
 <link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/util.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {
+        "packages":["map"],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        "mapsApiKey": "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY"
+      });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [37.4232, -122.0853, 'Work'],
+          [37.4289, -122.1697, 'University'],
+          [37.6153, -122.3900, 'Airport'],
+          [37.4422, -122.1731, 'Shopping']
+        ]);
+
+        var options = {
+          icons: {
+            default: {
+              normal: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+              selected: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
+            }
+          }
+        };
+
+        var map = new google.visualization.Map(document.getElementById('map_markers_div'));
+        map.draw(data, options);
+      }
+
+    </script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'name' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+          [ '1', '공립어의동실업보습학교', new Date(1910, 3, 30), new Date(1930, 2, 4) ],
+          [ '2', '경성공립직업학교',      new Date(1931, 2, 4),  new Date(1962, 2, 4) ],
+          [ '3', '경기공업전문고등학교',  new Date(1963, 2, 4),  new Date(1981, 2, 4) ],
+          [ '4', '경기공업개방대학',  new Date(1982, 2, 4),  new Date(1992, 2, 4) ],
+		  [ '5', '서울산업대학교',  new Date(1993, 2, 4),  new Date(2011, 2, 4) ],
+		  [ '6', '서울과학기술대학교',  new Date(2012, 2, 4),  new Date(2023, 2, 4) ]]);
+		  chart.draw(dataTable);
+      }
+    </script>
+  </head>
+
+
+
+
+
+
+
+
+
+
 	
 </head>
 <body>
