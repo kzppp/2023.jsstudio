@@ -1,0 +1,111 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="jsstudio.js"></script>
+<script type="text/javascript">
+      google.charts.load("current", {
+        "packages":["map"],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        "mapsApiKey": "AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY"
+      });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [37.4232, -122.0853, 'Work'],
+          [37.4289, -122.1697, 'University'],
+          [37.6153, -122.3900, 'Airport'],
+          [37.4422, -122.1731, 'Shopping']
+        ]);
+
+        var options = {
+          icons: {
+            default: {
+              normal: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Azure-icon.png',
+              selected: 'https://icons.iconarchive.com/icons/icons-land/vista-map-markers/48/Map-Marker-Ball-Right-Azure-icon.png'
+            }
+          }
+        };
+
+        var map = new google.visualization.Map(document.getElementById('map_markers_div'));
+        map.draw(data, options);
+      }
+
+</script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/loader.js"></script>
+<script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+        dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'string', id: 'name' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+          [ '1', '공립어의동실업보습학교', new Date(1910, 3, 30), new Date(1930, 2, 4) ],
+          [ '2', '경성공립직업학교',      new Date(1931, 2, 4),  new Date(1962, 2, 4) ],
+          [ '3', '경기공업전문고등학교',  new Date(1963, 2, 4),  new Date(1981, 2, 4) ],
+          [ '4', '경기공업개방대학',  new Date(1982, 2, 4),  new Date(1992, 2, 4) ],
+		  [ '5', '서울산업대학교',  new Date(1993, 2, 4),  new Date(2011, 2, 4) ],
+		  [ '6', '서울과학기술대학교',  new Date(2012, 2, 4),  new Date(2023, 2, 4) ]]);
+		  chart.draw(dataTable);
+      }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500&amp;family=Raleway:wght@100;200;300;400;500&amp;family=Roboto:wght@300;400;700&amp;display=swap" rel="stylesheet">
+<link href="jsstudio.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/core/tooltip.css">
+<link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/util.css">
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_default_module.js"></script>
+<link id="load-css-0" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/core/tooltip.css">
+<link id="load-css-1" rel="stylesheet" type="text/css" href="https://www.gstatic.com/charts/51/css/util/util.css">
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_default_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_graphics_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_ui_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_geo_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_map_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_fw_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/third_party/dygraphs/dygraph-tickers-combined.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_timeline_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_graphics_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_ui_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_geo_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_map_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_fw_module.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/third_party/dygraphs/dygraph-tickers-combined.js"></script>
+<script type="text/javascript" charset="UTF-8" src="https://www.gstatic.com/charts/51/js/jsapi_compiled_timeline_module.js"></script>
+</head>
+<body>
+
+<section class="nav">
+  <h1>JS STUDIO</h1>
+  <h3 class="span loader"><span class="m">여</span><span class="m">긴</span>&nbsp;<span class="m">아</span><span class="m">마</span><span class="m">도</span>&nbsp;<span class="m">매</span><span class="m">우</span>&nbsp;<span class="m">실</span><span class="m">험</span><span class="m">적</span><span class="m">인</span>&nbsp;<span class="m">공</span><span class="m">간</span></h3>
+  <div class="nav-container"><a class="nav-tab" href="#tab-svelte">1주차</a><a class="nav-tab" href="#tab-esbuild">2주차</a><span class="nav-tab-slider"></span></div>
+</section>
+<main class="main"> 
+  <section class="slider" id="tab-svelte">
+    <h1 style="padding:200 0 50 10; margin:auto;">1주차</h1>
+
+<img src="seoultech.png" width="550px" text-align="center"><br>
+  <a style="padding:30 0 0 10;">서울과학기술대학교 위치</a><br>
+
+    <iframe style="width:40%; height:150px; border:0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3159.745553015196!2d127.07490101105952!3d37.631672620274344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbbd569641237%3A0x7b8fe3317caedc65!2z7ISc7Jq46rO87ZWZ6riw7Iig64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1697076953446!5m2!1sko!2skr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<br><a style="padding:30 0 20 10;">서울과학기술대학교 역사</a>
+	<div id="timeline" style="height: 480px; margin:0px;"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 400px; height: 421px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="400" height="421" aria-label="A chart." style="overflow: hidden;"><defs id="_ABSTRACT_RENDERER_ID_0"></defs><g><rect x="0" y="0" width="400" height="40.992" stroke="none" stroke-width="0" fill="#ffffff"></rect><path d="M33,0L33,40.992" stroke="#e6e6e6" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M324.64279478984434,0L324.64279478984434,40.992" stroke="#e6e6e6" stroke-width="1" fill-opacity="1" fill="none"></path><rect x="0" y="40.992" width="400" height="40.992" stroke="none" stroke-width="0" fill="#e6e6e6"></rect><path d="M33,40.992L33,81.984" stroke="#ffffff" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M324.64279478984434,40.992L324.64279478984434,81.984" stroke="#ffffff" stroke-width="1" fill-opacity="1" fill="none"></path><rect x="0" y="81.984" width="400" height="40.992" stroke="none" stroke-width="0" fill="#ffffff"></rect><path d="M33,81.984L33,122.976" stroke="#e6e6e6" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M324.64279478984434,81.984L324.64279478984434,122.976" stroke="#e6e6e6" stroke-width="1" fill-opacity="1" fill="none"></path><rect x="0" y="122.976" width="400" height="40.992" stroke="none" stroke-width="0" fill="#e6e6e6"></rect><path d="M33,122.976L33,163.968" stroke="#ffffff" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M324.64279478984434,122.976L324.64279478984434,163.968" stroke="#ffffff" stroke-width="1" fill-opacity="1" fill="none"></path><rect x="0" y="163.968" width="400" height="40.992" stroke="none" stroke-width="0" fill="#ffffff"></rect><path d="M33,163.968L33,204.95999999999998" stroke="#e6e6e6" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M324.64279478984434,163.968L324.64279478984434,204.95999999999998" stroke="#e6e6e6" stroke-width="1" fill-opacity="1" fill="none"></path><rect x="0" y="204.95999999999998" width="400" height="40.992" stroke="none" stroke-width="0" fill="#e6e6e6"></rect><path d="M33,204.95999999999998L33,245.95199999999997" stroke="#ffffff" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M324.64279478984434,204.95999999999998L324.64279478984434,245.95199999999997" stroke="#ffffff" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M0,40.992L400,40.992" stroke="#b7b7b7" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M0,81.984L400,81.984" stroke="#b7b7b7" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M0,122.976L400,122.976" stroke="#b7b7b7" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M0,163.968L400,163.968" stroke="#b7b7b7" stroke-width="1" fill-opacity="1" fill="none"></path><path d="M0,204.95999999999998L400,204.95999999999998" stroke="#b7b7b7" stroke-width="1" fill-opacity="1" fill="none"></path><text text-anchor="end" x="20" y="25.046" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">1</text><text text-anchor="end" x="20" y="66.038" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">2</text><text text-anchor="end" x="20" y="107.02999999999999" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">3</text><text text-anchor="end" x="20" y="148.02200000000002" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">4</text><text text-anchor="end" x="20" y="189.014" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">5</text><text text-anchor="end" x="20" y="230.006" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#4d4d4d">6</text><rect x="0" y="0" width="400" height="245.95199999999997" stroke="#9a9a9a" stroke-width="1" fill-opacity="1" fill="none"></rect></g><g><text text-anchor="middle" x="324.64279478984434" y="267.00199999999995" font-family="Arial" font-size="13" stroke="none" stroke-width="0" fill="#000000">2000</text></g><g></g><g><rect x="34" y="9" width="63.53827879255972" height="22.991999999999997" stroke="none" stroke-width="0" fill="#4285f4"></rect><text text-anchor="start" x="106.53827879255972" y="24.695999999999998" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#202020">공립어의동실업보습학교</text><rect x="100.78835322263261" y="49.992" width="100.82354184031577" height="22.991999999999997" stroke="none" stroke-width="0" fill="#db4437"></rect><text text-anchor="start" x="210.61189506294838" y="65.688" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#202020">경성공립직업학교</text><rect x="204.86196949302126" y="90.984" width="58.54586130884712" height="22.991999999999997" stroke="none" stroke-width="0" fill="#f4b400"></rect><text text-anchor="end" x="195.86196949302126" y="106.67999999999999" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#202020">경기공업전문고등학교</text><rect x="266.6579052319413" y="131.976" width="32.52745724124998" height="22.991999999999997" stroke="none" stroke-width="0" fill="#0f9d58"></rect><text text-anchor="end" x="257.6579052319413" y="147.672" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#202020">경기공업개방대학</text><rect x="302.43543690326413" y="172.968" width="58.53695699534006" height="22.991999999999997" stroke="none" stroke-width="0" fill="#ab47bc"></rect><text text-anchor="end" x="293.43543690326413" y="188.664" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#202020">서울산업대학교</text><rect x="364.23137264218417" y="213.95999999999998" width="35.76862735781583" height="22.991999999999997" stroke="none" stroke-width="0" fill="#00acc1"></rect><text text-anchor="end" x="355.23137264218417" y="229.65599999999998" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#202020">서울과학기술대학교</text></g><g></g><g></g><g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>President</th><th>name</th><th>Start</th><th>End</th></tr></thead><tbody><tr><td>1</td><td>공립어의동실업보습학교</td><td>Apr 30, 1910</td><td>Mar 4, 1930</td></tr><tr><td>2</td><td>경성공립직업학교</td><td>Mar 4, 1931</td><td>Mar 4, 1962</td></tr><tr><td>3</td><td>경기공업전문고등학교</td><td>Mar 4, 1963</td><td>Mar 4, 1981</td></tr><tr><td>4</td><td>경기공업개방대학</td><td>Mar 4, 1982</td><td>Mar 4, 1992</td></tr><tr><td>5</td><td>서울산업대학교</td><td>Mar 4, 1993</td><td>Mar 4, 2011</td></tr><tr><td>6</td><td>서울과학기술대학교</td><td>Mar 4, 2012</td><td>Mar 4, 2023</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 431px; left: 410px; white-space: nowrap; font-family: Arial; font-size: 13px;">2000</div><div></div></div></div>
+  </section>
+  <section class="slider" id="tab-esbuild" style="background-color:#f2f2f2">
+    <h1 style="padding:100 0 50 10; margin:auto;">2주차</h1>
+	  <img src="DP.history.KBS.jpg" width="100%" text-align="center"><br>
+      </section>
+</main>
+<canvas class="background"></canvas>
+	  <audio src="lovelee.3gp"></audio>
+	  -->
